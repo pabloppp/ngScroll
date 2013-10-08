@@ -2,14 +2,15 @@
 	/**
 	 * AngularJS ng-wheel directive
 	 *
-	 * Adds support for ng-scroll event attribute to bind on mouse wheel events
+	 * Adds support for ng-scroll event attribute to bind on mouse wheel events. Use the `$event` local variable
+	 * to access the jQuery event object
 	 *
-	 * @example <ANY ng-scroll="callOnScroll()"></ANY>
+	 * @example <ANY ng-scroll="onScroll($event)"></ANY>
 	 */
 
-	angular.module('ngWheel', []).directive('ngWheel', ['$parse', function($parse) {
+	angular.module('ngWheel', []).directive('ngScroll', ['$parse', function($parse) {
 		return function(scope, element, attr) {
-			var fn = $parse(attr['ngWheel']);
+			var fn = $parse(attr.ngScroll);
 
 			element.bind('scroll', function(event) {
 				scope.$apply(function() {
