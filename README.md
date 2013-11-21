@@ -1,15 +1,15 @@
 ngWheel
 ============
 
-AngularJS `ng-wheel` directive
+AngularJS `ng-scroll` directive
 
-Adds support for ng-scroll event attribute to bind on mouse wheel events
+Adds ng-scroll directive to bind on mouse wheel events
 
 ### Usage:
 
 
 ```
-    <div class="scrollable" ng-scroll="calledOnMouseWhell()">
+    <div class="scrollable-box ..." ng-scroll="calledOnMouseWhell()">
         ...
     </div>
 ```
