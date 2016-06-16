@@ -1,4 +1,4 @@
-ngWheel
+ngScroll
 ============
 
 AngularJS `ng-scroll` directive
@@ -13,3 +13,8 @@ Adds ng-scroll directive to bind on mouse wheel events
         ...
     </div>
 ```
+
+### Updates:
+
+- renamed to ngScroll
+- removed $apply on every 'scroll' event, that was friggin slow
