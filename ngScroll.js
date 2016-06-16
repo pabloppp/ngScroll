@@ -14,10 +14,11 @@
 			var fn = $parse(attr.ngScroll);
 
 			element.bind('scroll', function(event) {
-				scope.$apply(function() {
-					fn(scope, {
-						$event: event
-					});
+				/*scope.$apply(function() {
+				});*/
+				//Don't apply in every scroll, that's just dumb & slow...
+				fn(scope, {
+					$event: event
 				});
 			});
 		};
