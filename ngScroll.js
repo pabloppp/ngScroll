@@ -7,8 +7,9 @@
 	 *
 	 * @example <ANY ng-scroll="onScroll($event)"></ANY>
 	 * @author Darlan Alves <darlan@moovia.com>
+	 * Modified by Pablo Pernias <pablo@pernias.com>
 	 */
-	angular.module('ngWheel', []).directive('ngScroll', ['$parse', function($parse) {
+	angular.module('ngScroll', []).directive('ngScroll', ['$parse', function($parse) {
 		return function(scope, element, attr) {
 			var fn = $parse(attr.ngScroll);
 
